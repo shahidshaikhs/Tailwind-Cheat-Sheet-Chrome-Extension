@@ -15,3 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Do you have any questions?
 Please reach out to me via my email "shahid.sk27595@gmail.com"
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/shahidshaikh27)
+
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/bukotsunikki.svg?style=social&label=Follow%20%40__shahidshaikh)](https://twitter.com/__shahidshaikh)
