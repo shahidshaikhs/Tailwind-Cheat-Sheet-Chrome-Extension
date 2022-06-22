@@ -1,6 +1,8 @@
 
 # Tailwind Cheat Sheet inside Chrome Extension
 
+![Tailwind Cheat Sheet Preview Image](header.png)
+
 ### Description
 
 Have been using this chrome extension for my personal usage since a few weeks now. Decided to publish it to the chrome web store hoping it will be helpful to other as well.
