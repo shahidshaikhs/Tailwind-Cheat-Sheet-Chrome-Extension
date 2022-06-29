@@ -69,7 +69,7 @@ function App() {
                 </div>
             </div>
             <main className="p-6">
-                <Masonry gutter="10" columnsCount={2}>
+                <Masonry gutter="10px" columnsCount={2}>
                     {
                         cheatSheetData.map((item, index) => (
                             <div key={index} className="card">
