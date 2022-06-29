@@ -44,10 +44,10 @@ function App() {
     }
 
     return (
-        <div className="App relative">
-            <div className="header py-4 border-b-zinc-800 border-b-2 flex px-5 items-center">
-                <h1 className="text-sky-500 text-center text-lg font-semibold flex items-center justify-center">
-                    <svg className="h-6 w-6 mr-2 -mt-1" fill="currentcolor" xmlns="http://www.w3.org/2000/svg"
+        <div className="relative App">
+            <div className="flex items-center px-5 py-4 border-b-2 header border-b-zinc-800">
+                <h1 className="flex items-center justify-center text-lg font-semibold text-center text-sky-500">
+                    <svg className="w-6 h-6 mr-2 -mt-1" fill="currentcolor" xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 24 24">
                         <path fill="none" d="M0 0h24v24H0z"/>
                         <path
@@ -55,12 +55,12 @@ function App() {
                     </svg>
                     Tailwind Cheat Sheet
                 </h1>
-                <a rel="noreferrer" href="https://github.com/shahidshaikhs/Tailwind-Cheat-Sheet-Chrome-Extension" target="_blank" className="inline-block ml-auto text-zinc-600 hover:text-sky-500 duration-200 transition">
-                    <svg fill="currentColor" className="h-6 w-6 ml-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"/></svg>
+                <a rel="noreferrer" href="https://github.com/shahidshaikhs/Tailwind-Cheat-Sheet-Chrome-Extension" target="_blank" className="inline-block ml-auto transition duration-200 text-zinc-600 hover:text-sky-500">
+                    <svg fill="currentColor" className="w-6 h-6 ml-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"/></svg>
                 </a>
-                <div className="flex items-center border-zinc-700 border-2 rounded-full py-1 px-3 ml-3">
-                    <input onChange={(e) => searchClass(e.target.value)} type="text" className="bg-transparent outline-none text-white placeholder:text-zinc-600 text-sm" placeholder="Search"/>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-auto text-zinc-600" fill="none"
+                <div className="flex items-center px-3 py-1 ml-3 border-2 rounded-full border-zinc-700 focus-within:border-sky-500 text-zinc-600 focus-within:text-sky-500">
+                    <input autoFocus onChange={(e) => searchClass(e.target.value)} type="text" className="text-sm text-white bg-transparent outline-none placeholder:text-zinc-600" placeholder="Search"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 ml-auto" fill="none"
                          viewBox="0 0 24 24"
                          stroke="currentColor" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round"
@@ -69,30 +69,30 @@ function App() {
                 </div>
             </div>
             <main className="p-6">
-                <Masonry gutter={10} columnsCount={2}>
+                <Masonry gutter="10" columnsCount={2}>
                     {
                         cheatSheetData.map((item, index) => (
                             <div key={index} className="card">
-                                <div className="rounded-t-2xl px-4 py-3 border-b-zinc-800 border-b-2">
-                                    <h2 className="text-white font-bold">{item.title}</h2>
+                                <div className="px-4 py-3 border-b-2 rounded-t-2xl border-b-zinc-800">
+                                    <h2 className="font-bold text-white">{item.title}</h2>
                                 </div>
                                 <ul className="py-3">
                                     {
                                         item.content.map((content, index) => (
                                             <li className="mb-2" key={index} onClick={(e) => expandView(e.target)}>
-                                                <div className="font-medium text-zinc-300 text-sm cursor-pointer hover:bg-zinc-800 py-2 px-4 transition duration-200 flex justify-between items-center">
+                                                <div className="flex items-center justify-between px-4 py-2 text-sm font-medium transition duration-200 cursor-pointer text-zinc-300 hover:bg-zinc-800">
                                                     {content.title}
                                                     <a rel="noreferrer" href={content.docs} target="_blank"
-                                                       className="text-xs hover:text-sky-500 transition duration-200 tracking-wide text-zinc-500">DOCS</a>
+                                                       className="text-xs tracking-wide transition duration-200 hover:text-sky-500 text-zinc-500">DOCS</a>
                                                 </div>
                                                 <div className="hidden content">
                                                     <div className="px-4 bg-zinc-800 ">
-                                                        <p className="text-xs text-zinc-300 pt-3 pb-2 font-medium border-b-2 border-zinc-700">{content.description}</p>
+                                                        <p className="pt-3 pb-2 text-xs font-medium border-b-2 text-zinc-300 border-zinc-700">{content.description}</p>
                                                     </div>
-                                                    <ul className="bg-zinc-800 py-0 px-4 mb-3">
+                                                    <ul className="px-4 py-0 mb-3 bg-zinc-800">
                                                         {
                                                             content.table.map((classes, index) => (
-                                                                <li key={index} className="flex justify-between items-center last:border-0 border-b-2 border-zinc-700 py-3">
+                                                                <li key={index} className="flex items-center justify-between py-3 border-b-2 last:border-0 border-zinc-700">
                                                                     <span onClick={(e) => {
                                                                         e.stopPropagation();
                                                                         copyToClipboard(classes[0])
@@ -104,7 +104,7 @@ function App() {
                                                                         }} className="text-[13px] text-sky-500 hover:text-sky-600 cursor-pointer transition duration-200">{classes[1]}</span>
                                                                         {
                                                                             classes[2] && (
-                                                                                <span className="text-xs text-zinc-300 hover:text-sky-600 cursor-pointer transition duration-200"> ({classes[2]})</span>
+                                                                                <span className="text-xs transition duration-200 cursor-pointer text-zinc-300 hover:text-sky-600"> ({classes[2]})</span>
                                                                             )
                                                                         }
                                                                     </span>
@@ -123,8 +123,8 @@ function App() {
                 </Masonry>
             </main>
 
-            <div className="copy-container copy-container-translate fixed right-4 bottom-4 transition duration-300 shadow-lg">
-                <div className="copy text-white bg-zinc-800 text-sm px-3 py-2 rounded-lg">
+            <div className="fixed transition duration-300 shadow-lg copy-container copy-container-translate right-4 bottom-4">
+                <div className="px-3 py-2 text-sm text-white rounded-lg copy bg-zinc-800">
                     Copied!
                 </div>
             </div>
