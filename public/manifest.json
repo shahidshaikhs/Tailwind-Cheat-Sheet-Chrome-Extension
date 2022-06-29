@@ -1,7 +1,7 @@
 {
   "name": "Tailwind Cheat Sheet Extension",
   "description": "The Chrome Extension for Tailwind Cheat Sheet",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "manifest_version": 3,
   "author": "Shahid Shaikh",
   "icons": {
