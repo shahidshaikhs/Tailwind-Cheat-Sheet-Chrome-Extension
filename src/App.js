@@ -10,7 +10,9 @@ function App() {
     const [cheatSheetData, setCheatSheetData] = useState(cheatsheet);
     const [searchTerm, setSearchTerm] = useState("");
     useEffect(() => {
-        document.querySelector("body").classList.add("dark:bg-zinc-900");
+        document.querySelector("html").classList.add("dark");
+        document.querySelector("body").classList.add("dark:bg-zinc-900")
+        document.querySelector("body").classList.add("bg-white");
     }, []);
 
     const expandView = (e) => {
@@ -90,7 +92,7 @@ function App() {
 
     return (
         <div className="relative App">
-            <div className="flex items-center px-5 py-4 border-b-2 header border-b-zinc-800">
+            <div className="flex items-center px-5 py-4 border-b-2 header dark:border-b-zinc-800 border-b-zinc-200">
                 <h1 className="flex items-center justify-center text-lg font-semibold text-center text-sky-500">
                     <svg
                         className="w-6 h-6 mr-2 -mt-1"
@@ -150,8 +152,8 @@ function App() {
                 <Masonry gutter="10px" columnsCount={2}>
                     {cheatSheetData.length > 0 && cheatSheetData.map((item, index) => (
                         <div key={index} className="card">
-                            <div className="px-4 py-3 border-b-2 rounded-t-2xl border-b-zinc-800">
-                                <h2 className="font-bold text-white">{item.title}</h2>
+                            <div className="px-4 py-3 border-b-2 rounded-t-2xl dark:border-b-zinc-800 border-b-zinc-200">
+                                <h2 className="font-bold dark:text-white text-zinc-600">{item.title}</h2>
                             </div>
                             <ul className="py-3">
                                 {item.content.map((content, index) => (
@@ -161,7 +163,7 @@ function App() {
                                         onClick={(e) => expandView(e.target)}
                                     >
                                         <div
-                                            className="flex items-center justify-between px-4 py-2 text-sm font-medium transition duration-200 cursor-pointer text-zinc-300 hover:bg-zinc-800">
+                                            className="flex items-center justify-between px-4 py-2 text-sm font-medium transition duration-200 cursor-pointer dark:text-zinc-300 dark:hover:bg-zinc-800 dark:text-zinc-500 hover:bg-zinc-200">
                                             {content.title}
                                             <a
                                                 rel="noreferrer"
@@ -173,16 +175,16 @@ function App() {
                                             </a>
                                         </div>
                                         <div className="hidden content">
-                                            <div className="px-4 bg-zinc-800 ">
-                                                <p className="pt-3 pb-2 text-xs font-medium border-b-2 text-zinc-300 border-zinc-700">
+                                            <div className="px-4 dark:bg-zinc-800 bg-zinc-100">
+                                                <p className="pt-3 pb-2 text-xs font-medium border-b-2 dark:text-zinc-300 text-zinc-600 dark:border-b-zinc-700 border-b-zinc-200">
                                                     {content.description}
                                                 </p>
                                             </div>
-                                            <ul className="px-4 py-0 mb-3 bg-zinc-800">
+                                            <ul className="px-4 py-0 mb-3 dark:bg-zinc-800 bg-zinc-100">
                                                 {content.table.map((classes, index) => (
                                                     <li
                                                         key={index}
-                                                        className="flex items-center justify-between py-3 border-b-2 last:border-0 border-zinc-700"
+                                                        className="flex items-center justify-between py-3 border-b-2 last:border-0 dark:border-b-zinc-700 border-b-zinc-200"
                                                     >
 														<span
                                                             onClick={(e) => {
@@ -205,7 +207,7 @@ function App() {
 															</span>
                                                             {classes[2] && (
                                                                 <span
-                                                                    className="text-xs transition duration-200 cursor-pointer text-zinc-300 hover:text-sky-600">
+                                                                    className="text-xs transition duration-200 cursor-pointer dark:text-zinc-300 text-zinc-500 hover:text-sky-600">
 																	{" "}
                                                                     ({classes[2]})
 																</span>

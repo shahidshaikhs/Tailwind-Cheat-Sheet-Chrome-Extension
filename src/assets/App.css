@@ -12,12 +12,12 @@ body {
     min-height: 600px;
     min-width: 700px;
     width: 700px;
-    border: 1px solid;
-    @apply border-zinc-800
+    border: 2px solid;
+    @apply dark:border-zinc-800 border-zinc-200;
 }
 
 .card {
-    @apply border-zinc-800 border-2 rounded-xl;
+    @apply dark:border-zinc-800 border-zinc-200 border-2 rounded-xl;
 }
 
 /* width */
@@ -27,17 +27,17 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    @apply bg-zinc-700
+    @apply dark:bg-zinc-700 bg-zinc-500;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    @apply bg-zinc-500
+    @apply dark:bg-zinc-500 bg-zinc-300;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    @apply bg-zinc-400
+    @apply dark:bg-zinc-400 bg-zinc-200;
 }
 
 .copy-container-translate {
