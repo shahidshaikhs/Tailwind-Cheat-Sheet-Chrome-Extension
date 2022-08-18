@@ -129,7 +129,7 @@ function App() {
                         autoFocus
                         onChange={(e) => searchClass(e.currentTarget.value)}
                         type="text"
-                        className="text-sm text-white bg-transparent outline-none placeholder:text-zinc-600"
+                        className="text-sm dark:text-white bg-transparent outline-none placeholder:text-zinc-600"
                         placeholder="Search"
                     />
                     <svg
