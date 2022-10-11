@@ -129,7 +129,7 @@ function App() {
                         autoFocus
                         onChange={(e) => searchClass(e.currentTarget.value)}
                         type="text"
-                        className="text-sm text-white bg-transparent outline-none placeholder:text-zinc-600"
+                        className="text-sm text-zinc-600 dark:text-white bg-transparent outline-none placeholder:text-zinc-600"
                         placeholder="Search"
                     />
                     <svg
@@ -180,7 +180,7 @@ function App() {
                                                     {content.description}
                                                 </p>
                                             </div>
-                                            <ul className="px-4 py-0 mb-3 dark:bg-zinc-800 bg-zinc-100">
+                                            <ul className="px-4 py-0 mb-3 dark:bg-zinc-800 bg-zinc-50">
                                                 {content.table.map((classes, index) => (
                                                     <li
                                                         key={index}
